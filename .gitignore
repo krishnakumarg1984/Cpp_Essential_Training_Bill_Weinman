@@ -72,8 +72,10 @@ _deps
 CMakeFiles/
 
 tags
+tags.*
 .ccls*
 *.zip
 *.tar.gz
 *.7z
 *.bzip
+
