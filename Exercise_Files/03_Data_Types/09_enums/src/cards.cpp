@@ -4,8 +4,8 @@
 #include <cstdint>
 using namespace std;
 
-enum card_suit : uint8_t { SPD, HRT, DIA, CLB };
-enum card_rank : uint8_t { ACE = 1, DEUCE = 2, JACK = 11, QUEEN, KING };
+enum card_suit : uint8_t { SPD, HRT, DIA, CLB };   // not really a type, though it looks syntactically like a type. Works more like constants. Great alternative to pre-processor constants. By default based on int type
+enum card_rank : uint8_t { ACE = 1, DEUCE = 2, JACK = 11, QUEEN, KING };  // implicit subsequential definition for queen & king (12 & 13 respectively)
 
 constexpr const char * aceString = "Ace";
 constexpr const char * jckString = "Jack";
@@ -18,7 +18,7 @@ constexpr const char * diaString = "Diamonds";
 constexpr const char * clbString = "Clubs";
 
 struct card {
-    uint8_t rank : 4;
+    uint8_t rank : 4;  // : indicates bitfields usage
     uint8_t suit : 4;
 };
 
@@ -33,11 +33,11 @@ card deck[52] = {
     { 8, CLB }, { 9, CLB }, { 10, CLB }, { 11, CLB }, { 12, CLB }, { 13, CLB }
 };
 
-void print_card( const card & c ) {
-    if(c.rank > DEUCE && c.rank < JACK) {
+void print_card(const card & c) {
+    if (c.rank > DEUCE && c.rank < JACK) {
         printf("%d of ", c.rank);
     } else {
-        switch(c.rank) {
+        switch (c.rank) {
             case ACE:
                 printf("%s of ", aceString);
                 break;
@@ -55,7 +55,7 @@ void print_card( const card & c ) {
                 break;
         }
     }
-    switch(c.suit) {
+    switch (c.suit) {
         case SPD:
             puts(spdString);
             break;
@@ -74,9 +74,9 @@ void print_card( const card & c ) {
 int main() {
     long int count = sizeof(deck) / sizeof(card);
     printf("count: %ld cards\n", count);
-    for( card c : deck ) {
+    for ( card c : deck ) {
         print_card(c);
     }
-    
+
     return 0;
 }

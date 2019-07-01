@@ -3,7 +3,7 @@
 using namespace std;
 
 struct preferences {
-    bool likesMusic : 1;
+    bool likesMusic : 1;  // no of bits (here, 1) set aside for likesMusic
     bool hasHair : 1;
     bool hasInternet : 1;
     bool hasDinosaur : 1;
@@ -17,15 +17,15 @@ int main() {
     homer.hasInternet = true;
     homer.hasDinosaur = false;
     homer.numberOfChildren = 3;
-    
+
     printf("sizeof int: %ld bits\n", sizeof(int) * 8);
     printf("sizeof homer: %ld bits\n", sizeof(homer) * 8);
-    
-    if(homer.likesMusic) printf("homer likes music\n");
-    if(homer.hasHair) printf("homer has hair\n");
-    if(homer.hasInternet) printf("homer has net\n");
-    if(homer.hasDinosaur) printf("homer has a dino\n");
+
+    if (homer.likesMusic) printf("homer likes music\n");
+    if (homer.hasHair) printf("homer has hair\n");
+    if (homer.hasInternet) printf("homer has net\n");
+    if (homer.hasDinosaur) printf("homer has a dino\n");
     printf("homer has %d children\n", homer.numberOfChildren);
-    
+
     return 0;
 }
