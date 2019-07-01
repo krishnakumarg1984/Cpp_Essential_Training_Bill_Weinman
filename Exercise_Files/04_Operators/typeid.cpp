@@ -2,6 +2,7 @@
 // version of 2018-10-28
 #include <cstdio>
 #include <typeinfo>
+#include <string>
 using namespace std;
 
 struct A { int x; };
@@ -11,7 +12,11 @@ A a1;
 B b1;
 
 int main() {
-    if(typeid(a1) == typeid(A)) {
+    printf("Type is %s\n", typeid(int).name());
+    printf("Type is %s\n", typeid(string).name());
+
+    printf("Type is %s\n", typeid(A).name());
+    if (typeid(b1) == typeid(A)) {
         puts("same");
     } else {
         puts("different");
