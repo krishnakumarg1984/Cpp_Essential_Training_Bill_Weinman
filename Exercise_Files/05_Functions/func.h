@@ -5,4 +5,4 @@
 
 void func();
 
-#endif // FUNC_H_
+#endif  // FUNC_H_
