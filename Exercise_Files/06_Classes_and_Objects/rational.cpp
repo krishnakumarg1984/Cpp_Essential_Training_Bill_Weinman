@@ -7,12 +7,15 @@ using namespace std;
 class Rational {
     int _n = 0;
     int _d = 1;
-public:
-    Rational ( int numerator = 0, int denominator = 1 ) : _n(numerator), _d(denominator) {};
-    Rational ( const Rational & rhs ) : _n(rhs._n), _d(rhs._d) {};    // copy constructor
+ public:
+    // implementation in the interface itself
+    Rational ( int numerator = 0, int denominator = 1 ) : _n(numerator), _d(denominator) {};  // Constructor with arguments. Default arguments on LHS of :, arguments passed from calling function in RHS of :
+    Rational ( const Rational & rhs ) : _n(rhs._n), _d(rhs._d) {};    // copy constructor?
     ~Rational ();
-    inline int numerator() const { return _n; };
-    inline int denominator() const { return _d; };
+    inline int numerator() const { return _n; };  // getter for numerator
+    inline int denominator() const { return _d; };  // getter for denominator
+
+    // Operator overloads
     Rational & operator = ( const Rational & );
     Rational operator + ( const Rational & ) const;
     Rational operator - ( const Rational & ) const;
@@ -56,7 +59,7 @@ std::ostream & operator << (std::ostream & o, const Rational & r) {
 
 int main() {
     
-    Rational a = 7;        // 7/1
+    Rational a = 7;        // 7/1.
     cout << "a is: " << a << endl;
     Rational b(5, 3);    // 5/3
     cout << "b is: " << b << endl;
