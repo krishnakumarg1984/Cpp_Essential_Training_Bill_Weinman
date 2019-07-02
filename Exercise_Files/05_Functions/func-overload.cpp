@@ -1,23 +1,30 @@
 // func-overload.cpp by Bill Weinman <http://bw.org/>
 // updated for C++EssT 2018-08-08
+
+// Rules for function overloading
+// 1. Return type cannot be the only distinguishing factor
+// 2. But the constantness of the return type can be & often is
+// 3. And something about how types are promoted
+//
+// Generally, a good idea to test
 #include <cstdio>
 using namespace std;
 
 // volume of a cube
-double volume( double a ) {
+double volume(double a) {
     printf("cube of %.3lf\n", a);
     return a * a * a;
 }
 
 // volume of a cylinder
-double volume( double r, double h ) {
+double volume(double r, double h) {
     const static double _pi = 3.141592653589793;
     printf("cylinder of %.3lf x %.3lf\n", r, h);
     return _pi * r * r * h;
 }
 
 // volume of a cuboid
-double volume( double a, double b, double c ) {
+double volume(double a, double b, double c) {
     printf("cuboid of %.3lf x %.3lf x %.3lf\n", a, b, c);
     return a * b * c;
 }
