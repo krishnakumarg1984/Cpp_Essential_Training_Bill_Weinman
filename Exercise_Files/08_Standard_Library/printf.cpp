@@ -9,5 +9,7 @@ int main() {
     long int li = 1234567890;
     const char * s = "This is a string.";
     printf("i is %d, li is %ld, s is %s\n", i, li, s);
+    fprintf(stdout, "i is %d, li is %ld, s is %s\n", i, li, s);
+    fprintf(stdout, "length of s is %zd\n", strlen(s));
     return 0;
 }

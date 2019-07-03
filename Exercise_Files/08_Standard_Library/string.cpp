@@ -4,7 +4,7 @@
 using namespace std;
 
 int main() {
-    const static size_t maxbuf = 128;
+    static const size_t maxbuf = 128;
     const char * s1 = "String one";
     const char * s2 = "String two";
     char sd1[maxbuf];
@@ -12,38 +12,46 @@ int main() {
     int i = 0;
     char c = 0;
     char * cp = nullptr;
-    
+
     // strncpy -- copy a string
     strncpy(sd1, s1, maxbuf);
     printf("sd1 is %s\n", sd1);
     strncpy(sd2, s2, maxbuf);
     printf("sd2 is %s\n", sd2);
-    
+
     // strncat -- concatenate string
+    // strnlen is safe because it has a maximum size
     strncat(sd1, " - ", maxbuf - strlen(sd1) - 1);
     strncat(sd1, s2, maxbuf - strlen(sd1) - 1);
     printf("sd1 is %s\n", sd1);
-    
+
     // strnlen -- get length of string
     printf("length of sd1 is %zd\n", strnlen(sd1, maxbuf));
     printf("length of sd2 is %zd\n", strnlen(sd2, maxbuf));
-    
+
     // strcmp -- compare strings
     i = strcmp(sd1, sd2);
     printf("sd1 %s sd2 (%d)\n", (i == 0) ? "==" : "!=", i);
     i = strcmp(sd2, s2);
     printf("sd2 %s s2 (%d)\n", (i == 0) ? "==" : "!=", i);
-    
+
     // strchr -- find a char in string
-    c = 'n';
-    cp = strchr(sd1, c);
+    // c = 'n';
+    c = '-';
+    cp = strchr(sd1, c);  // If found, returns a string beginning from the character in the variable 'c' (inclusive) to the end, otherwise returns a null-string
     printf("Did we find a '%c' in sd1? %s\n", c, cp ? "yes" : "no");
-    if(cp) printf("The first '%c' in sd1 is at position %ld\n", c, cp - sd1);
-    
+    printf("The contents of the string 'cp' is '%s'\n", cp);  // will return a null if was not found
+    if (cp) {  // Must perform the subtraction only if cp is non-zero
+        printf("The first '%c' in sd1 is at position %ld\n", c, cp - sd1);
+    }  // When two strings are subtracted from each other, the common portion is subtracted and the length of the remaining portion is returned as an integer
+
     // strstr -- find a string in string
     cp = strstr(sd1, s2);
+    printf("The contents of the string 'cp' is '%s'\n", cp);  // will return a null if was not found
     printf("Did we find '%s' in sd1? %s\n", s2, cp ? "yes" : "no");
-    if(cp) printf("The first '%s' in sd1 is at position %ld\n", s2, cp - sd1);
-    
+    if (cp) {
+        printf("The first '%s' in sd1 is at position %ld\n", s2, cp - sd1);
+    }
+
     return 0;
 }
