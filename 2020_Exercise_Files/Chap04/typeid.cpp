@@ -3,8 +3,12 @@
 #include <cstdio>
 #include <typeinfo>
 
-struct A { int x; };
-struct B { int x; };
+struct A {
+  int x;
+};
+struct B {
+  int x;
+};
 
 A a1;
 A a2;
@@ -12,10 +16,10 @@ B b1;
 B b2;
 
 int main() {
-    if(typeid(a1) == typeid(A)) {
-        puts("same");
-    } else {
-        puts("different");
-    }
-    return 0;
+  if (typeid(a1) == typeid(A)) {
+    puts("same");
+  } else {
+    puts("different");
+  }
+  return 0;
 }

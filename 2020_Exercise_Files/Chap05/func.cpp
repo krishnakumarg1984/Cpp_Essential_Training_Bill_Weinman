@@ -2,15 +2,12 @@
 // updated 2020-06-24
 #include <cstdio>
 
-void func()
-{
-    puts("this is func()");
+void func() {
+  puts("this is func()");
 }
 
-int main()
-{
-    puts("this is main()");
-    func();
-    return 0;
+int main() {
+  puts("this is main()");
+  func();
+  return 0;
 }
-

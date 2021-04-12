@@ -2,13 +2,12 @@
 // updated 2020-07-06
 #include <cstdio>
 
-int main()
-{
-    int x;
-    x = 42;
+int main() {
+  int x;
+  x = 42;
 
-    printf("x is %d\n", x);
-    printf("x is %d\n", x = 73);
+  printf("x is %d\n", x);
+  printf("x is %d\n", x = 73);
 
-    return 0;
+  return 0;
 }

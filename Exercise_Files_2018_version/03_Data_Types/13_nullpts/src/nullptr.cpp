@@ -8,18 +8,20 @@ using namespace std;
 #endif
 
 void f(int i) {
-    printf("the int is %d\n", i);
+  printf("the int is %d\n", i);
 }
 
-void f(const char * s) {
-    printf("the pointer is %p\n", s);
+void f(const char* s) {
+  printf("the pointer is %p\n", s);
 }
 
 // In C++ we can overload functions
 int main() {
-    f(3);
-    f("MyString");
-    f(nullptr);  // 'nullptr' is a special value standardised by Cpp11 & later. So now no more ambiguity on which function to call
-    /* f(NULL); */  // In C language, NULL was okay because it didn't support function overloading
-    return 0;
+  f(3);
+  f("MyString");
+  f(nullptr);  // 'nullptr' is a special value standardised by Cpp11 & later. So
+               // now no more ambiguity on which function to call
+  /* f(NULL); */  // In C language, NULL was okay because it didn't support
+                  // function overloading
+  return 0;
 }

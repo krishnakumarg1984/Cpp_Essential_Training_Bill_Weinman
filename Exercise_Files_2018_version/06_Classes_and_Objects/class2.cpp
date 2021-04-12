@@ -5,41 +5,41 @@ using namespace std;
 // a very simple class
 // interface : is usually in a .h or .hpp file
 class C1 {
-    int i = 0;  // is in the private section (defaults to private even without the 'private:' keyword)
+  int i = 0;  // is in the private section (defaults to private even without the
+              // 'private:' keyword)
  public:
-    // void setvalue(int value) { i = value; }
-    // int getvalue() { return i; }
+  // void setvalue(int value) { i = value; }
+  // int getvalue() { return i; }
 
-    void setvalue(int value);
-    int getvalue() const;  // const safe
-    int getvalue();
+  void setvalue(int value);
+  int getvalue() const;  // const safe
+  int getvalue();
 };
 
 // Best practice is to separate the implementation from the interface
 // Implementation (member function) in a separate .cpp file
 void C1::setvalue(int value) {
-    i = value;
+  i = value;
 }
 
 int C1::getvalue() const {  // const safe
-    puts("const getvalue()");
-    return i;
+  puts("const getvalue()");
+  return i;
 }
 
 int C1::getvalue() {
-    puts("mutable getvalue()");
-    return ++i;
+  puts("mutable getvalue()");
+  return ++i;
 }
 
 int main() {
-    int i = 47;
-    C1 o1;
+  int i = 47;
+  C1 o1;
 
-    o1.setvalue(i);
-    printf("value is %d\n", o1.getvalue());
+  o1.setvalue(i);
+  printf("value is %d\n", o1.getvalue());
 
-    const C1 o2;
-    printf("value is %d\n", o2.getvalue());
-    return 0;
+  const C1 o2;
+  printf("value is %d\n", o2.getvalue());
+  return 0;
 }
-

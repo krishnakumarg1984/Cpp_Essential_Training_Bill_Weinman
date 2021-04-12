@@ -18,14 +18,13 @@ constexpr unsigned int version_int = 0;
 constexpr char compiler[] = "unk";
 constexpr char version_string[] = "unk";
 constexpr unsigned int version_int = 0;
-#endif // lang
+#endif  // lang
 
-int main()
-{
-    if (version_int) {
-        printf("%s version %d\n", compiler, version_int);
-    } else {
-        printf("%s version %s\n", compiler, version_string);
-    }
-    return 0;
+int main() {
+  if (version_int) {
+    printf("%s version %d\n", compiler, version_int);
+  } else {
+    printf("%s version %s\n", compiler, version_string);
+  }
+  return 0;
 }

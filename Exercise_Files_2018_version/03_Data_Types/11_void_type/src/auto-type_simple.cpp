@@ -5,12 +5,14 @@
 using namespace std;
 
 string func() {
-    return string("this is a string");
+  return string("this is a string");
 }
 
 int main() {
-    auto x = func();
-    printf("x is %s\n", x.c_str());  // c.str() returns a c-string from an stl string
-    if (typeid(x) == typeid(string)) puts("x is string");
-    return 0;
+  auto x = func();
+  printf("x is %s\n",
+         x.c_str());  // c.str() returns a c-string from an stl string
+  if (typeid(x) == typeid(string))
+    puts("x is string");
+  return 0;
 }

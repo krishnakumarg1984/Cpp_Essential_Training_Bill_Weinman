@@ -29,7 +29,7 @@ int main() {
   cout << "element at 5: " << vi1.at(5) << endl;
 
   cout << endl << "Range-based for loop:" << endl;
-  for (int &i : vi1) {
+  for (int& i : vi1) {
     cout << i << ' ';
   }
   cout << endl;
@@ -50,7 +50,7 @@ int main() {
   cout << "vi1.back(): " << vi1.back() << endl;
 
   cout << "Range-based for loop: " << endl;
-  for (int &v : vi1) {
+  for (int& v : vi1) {
     cout << v << ' ';
   }
   cout << endl << endl;
@@ -60,7 +60,7 @@ int main() {
   int ia[size] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
   cout << endl << "Vector from C-array: " << endl;
   vector<int> vi2(ia, ia + size);
-  for (int &i : vi2) {
+  for (int& i : vi2) {
     cout << i << ' ';
   }
   cout << endl << endl;
@@ -68,7 +68,7 @@ int main() {
   // vector of strings
   cout << "Vector of strings:" << endl;
   vector<string> vs = {"one", "two", "three", "four", "five"};
-  for (string &v : vs) {
+  for (string& v : vs) {
     cout << v << endl;
   }
   cout << endl;
@@ -76,7 +76,7 @@ int main() {
   // Horizontal concatenation of strings
   cout << "The same vector of strings as above (with horz concatenation:"
        << endl;
-  for (string &v : vs) {
+  for (string& v : vs) {
     cout << v << ' ';
   }
   cout << endl;

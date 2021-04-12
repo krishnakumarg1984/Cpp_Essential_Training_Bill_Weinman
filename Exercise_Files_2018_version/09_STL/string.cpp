@@ -53,14 +53,14 @@ int main() {
   cout << "after erase: " << s1 << endl;
 
   // replace
-  s1.replace(5, 2, "ain't"); // At position 5, remove 2 characters and insert
-                             // the string in the 3rd argument
+  s1.replace(5, 2, "ain't");  // At position 5, remove 2 characters and insert
+                              // the string in the 3rd argument
   cout << "after replace: " << s1 << endl;
 
   // substr
   cout << "substr: " << s1.substr(5, 5)
-       << endl; // Return the string in 's1' starting from position 5, and 5
-                // characters long
+       << endl;  // Return the string in 's1' starting from position 5, and 5
+                 // characters long
 
   // find
   size_t pos = s1.find("s");

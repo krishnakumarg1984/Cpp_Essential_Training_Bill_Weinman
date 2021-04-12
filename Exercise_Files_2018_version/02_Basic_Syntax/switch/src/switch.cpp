@@ -11,21 +11,21 @@ int main() {
   int x = 42;
 
   switch (x) {
-  case iONE:
-    puts("one");
-    break;
-  case iTWO:
-    puts("two");
-    break;
-  case iTHREE:
-    puts("three");
-    /* break; */
-  case iFOUR:
-    puts("four");
-    break;
-  default:
-    puts("default");
-    break;
+    case iONE:
+      puts("one");
+      break;
+    case iTWO:
+      puts("two");
+      break;
+    case iTHREE:
+      puts("three");
+      /* break; */
+    case iFOUR:
+      puts("four");
+      break;
+    default:
+      puts("default");
+      break;
   }
   puts("After the switch");
 }
