@@ -75,7 +75,7 @@ tags
 tags.*
 # .ccls*
 .ccls-cache
-*.zip
+!*.zip
 *.tar.gz
 *.7z
 *.bzip
