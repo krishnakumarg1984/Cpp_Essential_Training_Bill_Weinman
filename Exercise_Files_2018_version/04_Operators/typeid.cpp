@@ -6,24 +6,24 @@
 using namespace std;
 
 struct A {
-  int x;
+    int x;
 };
 struct B {
-  int x;
+    int x;
 };
 
 A a1;
 B b1;
 
 int main() {
-  printf("Type is %s\n", typeid(int).name());
-  printf("Type is %s\n", typeid(string).name());
+    printf("Type is %s\n", typeid(int).name());
+    printf("Type is %s\n", typeid(string).name());
 
-  printf("Type is %s\n", typeid(A).name());
-  if (typeid(b1) == typeid(A)) {
-    puts("same");
-  } else {
-    puts("different");
-  }
-  return 0;
+    printf("Type is %s\n", typeid(A).name());
+    if (typeid(b1) == typeid(A)) {
+        puts("same");
+    } else {
+        puts("different");
+    }
+    return 0;
 }

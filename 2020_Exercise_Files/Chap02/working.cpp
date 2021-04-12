@@ -3,8 +3,8 @@
 #include <cstdio>
 
 int main() {
-  const int i{7};
-  i = 42;
-  puts("Hello, World!");
-  return 0;
+    const int i{7};
+    i = 42;
+    puts("Hello, World!");
+    return 0;
 }

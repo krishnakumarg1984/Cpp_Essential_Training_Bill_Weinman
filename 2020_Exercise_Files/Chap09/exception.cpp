@@ -5,22 +5,22 @@
 
 namespace BW {
 class E : public std::exception {
-  const char* msg;
-  E();
+    const char* msg;
+    E();
 
- public:
-  E(const char* s) noexcept(true) : msg(s) {}
-  const char* what() const noexcept(true) { return msg; }
+   public:
+    E(const char* s) noexcept(true) : msg(s) {}
+    const char* what() const noexcept(true) { return msg; }
 };
 }  // namespace BW
 
 void broken() {
-  std::cout << "this is a broken function" << std::endl;
-  throw std::exception();
+    std::cout << "this is a broken function" << std::endl;
+    throw std::exception();
 }
 
 int main() {
-  std::cout << "let's have an emergency!" << std::endl;
-  broken();
-  return 0;
+    std::cout << "let's have an emergency!" << std::endl;
+    broken();
+    return 0;
 }

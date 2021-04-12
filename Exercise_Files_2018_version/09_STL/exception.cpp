@@ -13,15 +13,15 @@ using namespace std;
 // exception class inheriting the generic exception class & overload a few
 // things what it does
 class MyExceptionClass : public exception {
-  const char* msg;
-  MyExceptionClass();
+    const char* msg;
+    MyExceptionClass();
 
- public:
-  MyExceptionClass(const char* s) throw()
-      : msg(s) {}  // Initialise a message in this constructor
-  const char* what() const throw() {
-    return msg;
-  }  // Overloaded what() to return that message
+   public:
+    MyExceptionClass(const char* s) throw()
+        : msg(s) {}  // Initialise a message in this constructor
+    const char* what() const throw() {
+        return msg;
+    }  // Overloaded what() to return that message
 };
 
 const MyExceptionClass e_ouch("Ouch!");
@@ -29,28 +29,28 @@ const MyExceptionClass e_bad("Bad Code!");
 const MyExceptionClass e_worse("don't do that!");
 
 void broken() {
-  cout << "this is a broken function" << endl;
-  // throw exception();
-  // throw MyExceptionClass("Ouch!");
-  // throw e_ouch;
-  throw e_worse;
+    cout << "this is a broken function" << endl;
+    // throw exception();
+    // throw MyExceptionClass("Ouch!");
+    // throw e_ouch;
+    throw e_worse;
 }
 
 int main() {
-  cout << "let's have an emergency!" << endl;
-  // broken();
+    cout << "let's have an emergency!" << endl;
+    // broken();
 
-  // try {
-  //     broken();
-  // } catch(exception & e) {
-  //     cout << e.what() << endl;
-  // }
+    // try {
+    //     broken();
+    // } catch(exception & e) {
+    //     cout << e.what() << endl;
+    // }
 
-  try {
-    broken();
-  } catch (MyExceptionClass& e) {
-    cout << e.what() << endl;
-  }
+    try {
+        broken();
+    } catch (MyExceptionClass& e) {
+        cout << e.what() << endl;
+    }
 
-  return 0;
+    return 0;
 }

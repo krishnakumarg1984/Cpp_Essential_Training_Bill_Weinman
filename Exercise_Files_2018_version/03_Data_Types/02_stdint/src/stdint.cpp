@@ -7,14 +7,14 @@ using namespace std;
 constexpr size_t byte = 8;
 
 int main() {
-  /* printf("sizeof int8_t is %ld bits\n", sizeof(int8_t) * byte); */
-  /* printf("sizeof int16_t is %ld bits\n", sizeof(int16_t) * byte); */
-  /* printf("sizeof int32_t is %ld bits\n", sizeof(int32_t) * byte); */
-  /* printf("sizeof int64_t is %ld bits\n", sizeof(int64_t) * byte); */
+    /* printf("sizeof int8_t is %ld bits\n", sizeof(int8_t) * byte); */
+    /* printf("sizeof int16_t is %ld bits\n", sizeof(int16_t) * byte); */
+    /* printf("sizeof int32_t is %ld bits\n", sizeof(int32_t) * byte); */
+    /* printf("sizeof int64_t is %ld bits\n", sizeof(int64_t) * byte); */
 
-  printf("sizeof uint8_t is %ld bits\n", sizeof(uint8_t) * byte);
-  printf("sizeof uint16_t is %ld bits\n", sizeof(uint16_t) * byte);
-  printf("sizeof uint32_t is %ld bits\n", sizeof(uint32_t) * byte);
-  printf("sizeof uint64_t is %ld bits\n", sizeof(uint64_t) * byte);
-  return 0;
+    printf("sizeof uint8_t is %ld bits\n", sizeof(uint8_t) * byte);
+    printf("sizeof uint16_t is %ld bits\n", sizeof(uint16_t) * byte);
+    printf("sizeof uint32_t is %ld bits\n", sizeof(uint32_t) * byte);
+    printf("sizeof uint64_t is %ld bits\n", sizeof(uint64_t) * byte);
+    return 0;
 }

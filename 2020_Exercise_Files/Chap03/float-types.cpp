@@ -6,13 +6,13 @@
 const size_t byte = 8;
 
 int main() {
-  float f;
-  double df;
-  long double ldf;
+    float f;
+    double df;
+    long double ldf;
 
-  printf("size of float f is %zd bits\n", sizeof(f) * byte);
-  printf("size of double df is %zd bits\n", sizeof(df) * byte);
-  printf("size of long double ldf is %zd bits\n", sizeof(ldf) * byte);
+    printf("size of float f is %zd bits\n", sizeof(f) * byte);
+    printf("size of double df is %zd bits\n", sizeof(df) * byte);
+    printf("size of long double ldf is %zd bits\n", sizeof(ldf) * byte);
 
-  return 0;
+    return 0;
 }

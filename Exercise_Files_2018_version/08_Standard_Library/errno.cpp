@@ -5,14 +5,14 @@
 #include <cstring>  // Required for the strerror() function
 
 int main() {
-  printf("errno is: %d\n", errno);
-  printf("Erasing file foo.bar\n");
-  remove("foo.bar");
-  printf("errno is: %d\n", errno);
-  // perror("Cannot erase file");  // a :<space> gets appended to this string,
-  // followed by the last error message perror("");
+    printf("errno is: %d\n", errno);
+    printf("Erasing file foo.bar\n");
+    remove("foo.bar");
+    printf("errno is: %d\n", errno);
+    // perror("Cannot erase file");  // a :<space> gets appended to this string,
+    // followed by the last error message perror("");
 
-  const char* myErrStr = strerror(errno);
-  printf("The latest error message is: %s\n", myErrStr);
-  return 0;
+    const char* myErrStr = strerror(errno);
+    printf("The latest error message is: %s\n", myErrStr);
+    return 0;
 }

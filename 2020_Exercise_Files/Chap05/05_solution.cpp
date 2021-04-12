@@ -4,18 +4,18 @@
 
 // non-recursive factorial
 unsigned long int factorial(unsigned long int n) {
-  unsigned long int rc = n;
+    unsigned long int rc = n;
 
-  // the product of all numbers 2 through n
-  while (n > 1) {
-    rc *= --n;
-  }
+    // the product of all numbers 2 through n
+    while (n > 1) {
+        rc *= --n;
+    }
 
-  return rc;
+    return rc;
 }
 
 int main() {
-  unsigned long int n = 5;
-  printf("Factorial of %ld is %ld\n", n, factorial(n));
-  return 0;
+    unsigned long int n = 5;
+    printf("Factorial of %ld is %ld\n", n, factorial(n));
+    return 0;
 }

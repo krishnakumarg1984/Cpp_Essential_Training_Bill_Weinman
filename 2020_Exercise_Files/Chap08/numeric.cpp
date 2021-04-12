@@ -5,9 +5,9 @@
 #include <cstdlib>
 
 int main() {
-  int neg = -47;
-  int x = abs(neg);
-  printf("x is %d\n", x);
+    int neg = -47;
+    int x = abs(neg);
+    printf("x is %d\n", x);
 
-  return 0;
+    return 0;
 }

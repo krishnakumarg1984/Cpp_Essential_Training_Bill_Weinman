@@ -3,15 +3,15 @@
 #include <cstdio>
 
 struct S {
-  int i;
-  double d;
-  const char* s;
+    int i;
+    double d;
+    const char* s;
 };
 
 int main() {
-  S s1 = {3, 47.9, "string one"};
+    S s1 = {3, 47.9, "string one"};
 
-  printf("s1: %d, %f, %s\n", s1.i, s1.d, s1.s);
+    printf("s1: %d, %f, %s\n", s1.i, s1.d, s1.s);
 
-  return 0;
+    return 0;
 }

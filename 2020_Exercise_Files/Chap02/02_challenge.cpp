@@ -6,13 +6,13 @@ const char string[] = "This is a null-terminated string.";
 // const char string[] = "Hello";
 
 int main() {
-  int count = 0;
-  for (auto c : string) {
-    if (c == 0)
-      break;
+    int count = 0;
+    for (auto c : string) {
+        if (c == 0)
+            break;
 
-    count++;
-  }
-  printf("The number of characters is: %d\n", count);
-  return 0;
+        count++;
+    }
+    printf("The number of characters is: %d\n", count);
+    return 0;
 }

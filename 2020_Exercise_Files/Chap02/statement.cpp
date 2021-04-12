@@ -3,11 +3,11 @@
 #include <cstdio>
 
 int main() {
-  int x;
-  x = 42;
+    int x;
+    x = 42;
 
-  printf("x is %d\n", x);
-  printf("x is %d\n", x = 73);
+    printf("x is %d\n", x);
+    printf("x is %d\n", x = 73);
 
-  return 0;
+    return 0;
 }

@@ -4,10 +4,10 @@
 #include <typeinfo>
 
 struct A {
-  int x;
+    int x;
 };
 struct B {
-  int x;
+    int x;
 };
 
 A a1;
@@ -16,10 +16,10 @@ B b1;
 B b2;
 
 int main() {
-  if (typeid(a1) == typeid(A)) {
-    puts("same");
-  } else {
-    puts("different");
-  }
-  return 0;
+    if (typeid(a1) == typeid(A)) {
+        puts("same");
+    } else {
+        puts("different");
+    }
+    return 0;
 }

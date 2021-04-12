@@ -21,10 +21,10 @@ constexpr unsigned int version_int = 0;
 #endif  // lang
 
 int main() {
-  if (version_int) {
-    printf("%s version %d\n", compiler, version_int);
-  } else {
-    printf("%s version %s\n", compiler, version_string);
-  }
-  return 0;
+    if (version_int) {
+        printf("%s version %d\n", compiler, version_int);
+    } else {
+        printf("%s version %s\n", compiler, version_string);
+    }
+    return 0;
 }

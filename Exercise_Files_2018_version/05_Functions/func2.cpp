@@ -22,16 +22,16 @@ using namespace std;
 // }
 
 void func(const string& s) {
-  printf("The value is %s\n", s.c_str());
+    printf("The value is %s\n", s.c_str());
 }
 
 int main() {
-  // int i = 42;
-  // puts("this is main()");
-  // func(&i);
-  // printf("After func(), the value is %d\n", i);
+    // int i = 42;
+    // puts("this is main()");
+    // func(&i);
+    // printf("After func(), the value is %d\n", i);
 
-  string s = "This is a string!";
-  func(s);
-  return 0;
+    string s = "This is a string!";
+    func(s);
+    return 0;
 }

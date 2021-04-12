@@ -18,8 +18,8 @@ const char* diaString = "Diamonds";
 const char* clbString = "Clubs";
 
 struct card {
-  uint8_t rank;
-  uint8_t suit;
+    uint8_t rank;
+    uint8_t suit;
 };
 
 card deck[52] = {
@@ -34,49 +34,49 @@ card deck[52] = {
     {10, CLB},   {11, CLB},    {12, CLB}, {13, CLB}};
 
 void print_card(const card& c) {
-  if (c.rank >= 3 && c.rank <= 10) {
-    printf("%d of ", c.rank);
-  } else {
-    switch (c.rank) {
-      case ACE:
-        printf("%s of ", aceString);
-        break;
-      case JACK:
-        printf("%s of ", jckString);
-        break;
-      case QUEEN:
-        printf("%s of ", queString);
-        break;
-      case KING:
-        printf("%s of ", kngString);
-        break;
-      case DEUCE:
-        printf("%s of ", deuString);
-        break;
+    if (c.rank >= 3 && c.rank <= 10) {
+        printf("%d of ", c.rank);
+    } else {
+        switch (c.rank) {
+            case ACE:
+                printf("%s of ", aceString);
+                break;
+            case JACK:
+                printf("%s of ", jckString);
+                break;
+            case QUEEN:
+                printf("%s of ", queString);
+                break;
+            case KING:
+                printf("%s of ", kngString);
+                break;
+            case DEUCE:
+                printf("%s of ", deuString);
+                break;
+        }
     }
-  }
-  switch (c.suit) {
-    case SPD:
-      puts(spdString);
-      break;
-    case HRT:
-      puts(hrtString);
-      break;
-    case DIA:
-      puts(diaString);
-      break;
-    case CLB:
-      puts(clbString);
-      break;
-  }
+    switch (c.suit) {
+        case SPD:
+            puts(spdString);
+            break;
+        case HRT:
+            puts(hrtString);
+            break;
+        case DIA:
+            puts(diaString);
+            break;
+        case CLB:
+            puts(clbString);
+            break;
+    }
 }
 
 int main() {
-  long int count = sizeof(deck) / sizeof(card);
-  printf("count: %ld cards\n", count);
-  for (card c : deck) {
-    print_card(c);
-  }
+    long int count = sizeof(deck) / sizeof(card);
+    printf("count: %ld cards\n", count);
+    for (card c : deck) {
+        print_card(c);
+    }
 
-  return 0;
+    return 0;
 }

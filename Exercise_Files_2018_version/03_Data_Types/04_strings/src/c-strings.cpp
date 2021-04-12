@@ -3,18 +3,18 @@
 using namespace std;
 
 int main() {
-  /* char cstring[] = "String"; */
-  /* const char * cstring = "String"; */
-  /* const char * const cstring = "String"; */  // is invalid
-  /* cstring = "foo"; */
+    /* char cstring[] = "String"; */
+    /* const char * cstring = "String"; */
+    /* const char * const cstring = "String"; */  // is invalid
+    /* cstring = "foo"; */
 
-  const char* cstring =
-      "String"
-      " foo";
-  printf("The string is: %s\n", cstring);
+    const char* cstring =
+        "String"
+        " foo";
+    printf("The string is: %s\n", cstring);
 
-  for (unsigned int i = 0; cstring[i]; i++) {
-    printf("%02d: %c\n", i, cstring[i]);
-  }
-  return 0;
+    for (unsigned int i = 0; cstring[i]; i++) {
+        printf("%02d: %c\n", i, cstring[i]);
+    }
+    return 0;
 }

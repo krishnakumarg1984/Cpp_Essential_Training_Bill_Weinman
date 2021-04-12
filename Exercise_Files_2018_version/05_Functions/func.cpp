@@ -12,11 +12,11 @@ using namespace std;
 // void func();
 
 int main() {
-  puts("this is main()");
-  func();
-  return 0;
+    puts("this is main()");
+    func();
+    return 0;
 }
 
 void func() {
-  puts("this is func()");
+    puts("this is func()");
 }
