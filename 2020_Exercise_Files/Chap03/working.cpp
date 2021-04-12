@@ -3,6 +3,8 @@
 #include <cstdio>
 
 int main() {
-  puts("Hello, World!");
+  puts("Hello, World! @");
+  puts("Hello, World! \x40");
+  puts("Hello, World! \u03bc");
   return 0;
 }
