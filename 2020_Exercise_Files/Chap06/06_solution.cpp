@@ -12,8 +12,12 @@ class Rational {
         : n(numerator), d(denominator){};
     Rational(const Rational& rhs) : n(rhs.n), d(rhs.d){};  // copy constructor
     ~Rational();
-    int numerator() const { return n; };
-    int denominator() const { return d; };
+    int numerator() const {
+        return n;
+    };
+    int denominator() const {
+        return d;
+    };
     Rational& operator=(const Rational&);
     Rational reduce() const;         // reduce fraction
     std::string string() const;      // return a formatted STL string

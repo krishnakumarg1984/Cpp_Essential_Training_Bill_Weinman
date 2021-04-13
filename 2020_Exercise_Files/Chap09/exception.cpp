@@ -9,8 +9,11 @@ class E : public std::exception {
     E();
 
    public:
-    E(const char* s) noexcept(true) : msg(s) {}
-    const char* what() const noexcept(true) { return msg; }
+    E(const char* s) noexcept(true) : msg(s) {
+    }
+    const char* what() const noexcept(true) {
+        return msg;
+    }
 };
 }  // namespace BW
 

@@ -16,22 +16,39 @@ class Item {
     std::string _desc;
 
    public:
-    Item() { reset(); }
+    Item() {
+        reset();
+    }
     Item(int sku, std::string& name, std::string& desc)
-        : _sku(sku), _name(name), _desc(desc) {}
+        : _sku(sku), _name(name), _desc(desc) {
+    }
     Item(const Item&);
     Item& operator=(const Item&);
-    ~Item() { reset(); }
+    ~Item() {
+        reset();
+    }
     void reset() {
         _sku = 0;
         _name = _desc = "unk";
     }
-    void sku(int sku) { _sku = sku; }
-    int sku() const { return _sku; }
-    void name(const std::string& name) { _name = name; }
-    std::string name() const { return _name; }
-    void desc(const std::string& desc) { _desc = desc; }
-    std::string desc() const { return _desc; }
+    void sku(int sku) {
+        _sku = sku;
+    }
+    int sku() const {
+        return _sku;
+    }
+    void name(const std::string& name) {
+        _name = name;
+    }
+    std::string name() const {
+        return _name;
+    }
+    void desc(const std::string& desc) {
+        _desc = desc;
+    }
+    std::string desc() const {
+        return _desc;
+    }
 };
 
 Item::Item(const Item& rhs) {

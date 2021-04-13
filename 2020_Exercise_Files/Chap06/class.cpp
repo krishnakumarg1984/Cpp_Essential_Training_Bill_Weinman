@@ -7,9 +7,19 @@ class C1 {
     int i = 0;
 
    public:
-    void setvalue(int value) { i = value; }
-    int getvalue() { return i; }
+    // void setvalue(int value){ i = value; }
+    void setvalue(int value);
+    // int getvalue() { return i; }
+    int getvalue();
 };
+
+void C1::setvalue(int value) {
+    i = value;
+}
+
+int C1::getvalue() {
+    return i;
+}
 
 int main() {
     int i = 47;

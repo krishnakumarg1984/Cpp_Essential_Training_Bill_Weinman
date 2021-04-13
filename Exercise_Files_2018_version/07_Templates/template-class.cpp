@@ -10,8 +10,11 @@ class E : public std::exception {
     const char* msg;
     E(){};  // no default constructor
    public:
-    explicit E(const char* s) throw() : msg(s) {}
-    const char* what() const throw() { return msg; }
+    explicit E(const char* s) throw() : msg(s) {
+    }
+    const char* what() const throw() {
+        return msg;
+    }
 };
 
 // simple fixed-size LIFO stack template
@@ -26,13 +29,23 @@ class bwstack {
 
    public:
     explicit bwstack(int s = defaultsize);
-    ~bwstack() { delete[] _stkptr; }
+    ~bwstack() {
+        delete[] _stkptr;
+    }
     T& push(const T&);
     T& pop();
-    bool isempty() const { return _top < 0; }
-    bool isfull() const { return _top >= _size - 1; }
-    int top() const { return _top; }
-    int size() const { return _size; }
+    bool isempty() const {
+        return _top < 0;
+    }
+    bool isfull() const {
+        return _top >= _size - 1;
+    }
+    int top() const {
+        return _top;
+    }
+    int size() const {
+        return _size;
+    }
 };
 
 // Stack<T> constructor

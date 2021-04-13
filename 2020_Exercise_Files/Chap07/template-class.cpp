@@ -9,8 +9,11 @@ class BWEx : public std::exception {
     const char* msg;
     BWEx();  // no default constructor
    public:
-    explicit BWEx(const char* s) throw() : msg(s) {}
-    const char* what() const throw() { return msg; }
+    explicit BWEx(const char* s) throw() : msg(s) {
+    }
+    const char* what() const throw() {
+        return msg;
+    }
 };
 
 // simple fixed-size LIFO stack template
@@ -30,10 +33,18 @@ class Stack {
     }
     T& push(const T&);
     T& pop();
-    bool isEmpty() const { return S_top < 0; }
-    bool isFull() const { return S_top >= S_size - 1; }
-    int top() const { return S_top; }
-    int size() const { return S_size; }
+    bool isEmpty() const {
+        return S_top < 0;
+    }
+    bool isFull() const {
+        return S_top >= S_size - 1;
+    }
+    int top() const {
+        return S_top;
+    }
+    int size() const {
+        return S_size;
+    }
 };
 
 // Stack<T> constructor

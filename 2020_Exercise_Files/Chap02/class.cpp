@@ -6,8 +6,12 @@ class C {
     int i = 0;
 
    public:
-    void setvalue(int value) { i = value; }
-    int getvalue() { return i; }
+    void setvalue(int value) {
+        i = value;
+    }
+    int getvalue() {
+        return i;
+    }
 };
 
 int main() {

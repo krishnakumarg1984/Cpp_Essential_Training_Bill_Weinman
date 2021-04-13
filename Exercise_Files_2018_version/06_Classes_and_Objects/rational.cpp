@@ -18,8 +18,12 @@ class Rational {
     Rational(const Rational& rhs)
         : _n(rhs._n), _d(rhs._d){};  // copy constructor?
     ~Rational();
-    inline int numerator() const { return _n; };    // getter for numerator
-    inline int denominator() const { return _d; };  // getter for denominator
+    inline int numerator() const {
+        return _n;
+    };  // getter for numerator
+    inline int denominator() const {
+        return _d;
+    };  // getter for denominator
 
     // Operator overloads
     Rational& operator=(const Rational&);

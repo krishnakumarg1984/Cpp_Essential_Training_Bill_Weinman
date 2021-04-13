@@ -7,8 +7,11 @@ class A {
     int a;
 
    public:
-    A(const int& a) : a(a) {}
-    const int& value() const { return a; }
+    A(const int& a) : a(a) {
+    }
+    const int& value() const {
+        return a;
+    }
 };
 
 int operator+(const A& lhs, const A& rhs) {

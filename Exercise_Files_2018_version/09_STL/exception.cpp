@@ -17,8 +17,8 @@ class MyExceptionClass : public exception {
     MyExceptionClass();
 
    public:
-    MyExceptionClass(const char* s) throw()
-        : msg(s) {}  // Initialise a message in this constructor
+    MyExceptionClass(const char* s) throw() : msg(s) {
+    }  // Initialise a message in this constructor
     const char* what() const throw() {
         return msg;
     }  // Overloaded what() to return that message
