@@ -3,7 +3,9 @@
 #include <cstdio>
 
 #ifndef NULL
-#define NULL (0LL) /* common C++ definition */
+// #define NULL (0LL) /* common C++ definition */
+// #define NULL ((void*)0)
+#define NULL (0)
 #endif
 
 void f(int i) {
@@ -15,6 +17,8 @@ void f(const char* s) {
 }
 
 int main() {
-    f(NULL);
+    // f(NULL);
+    f(nullptr);
+    // f(0);
     return 0;
 }

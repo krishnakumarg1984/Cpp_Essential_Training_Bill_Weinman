@@ -72,7 +72,7 @@ void print_card(const card& c) {
 }
 
 int main() {
-    long int count = sizeof(deck) / sizeof(card);
+    long int count = sizeof(deck) / sizefrof(card);
     printf("count: %ld cards\n", count);
     for (card c : deck) {
         print_card(c);

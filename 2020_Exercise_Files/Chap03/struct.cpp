@@ -10,8 +10,10 @@ struct Employee {
 
 int main() {
     Employee joe = {42, "Joe", "Boss"};
+    Employee* j = &joe;
 
     printf("%s is the %s and has id %d\n", joe.name, joe.role, joe.id);
+    printf("%s is the %s and has id %d\n", j->name, j->role, j->id);
 
     return 0;
 }
